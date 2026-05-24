@@ -69,7 +69,7 @@ export default function WegVerwaltungPage() {
               { n: '06', t: 'Rechtliche Begleitung', d: 'Zusammenarbeit mit spezialisierten Fachanwälten für WEG-Recht bei Beschlussanfechtungen oder strittigen Maßnahmen.' },
             ].map((it, i) => (
               <Reveal key={i} delay={i * 60}>
-                <div style={{ background: 'var(--color-background)', padding: 32, minHeight: 200 }}>
+                <div style={{ background: 'var(--color-background)', padding: 40, minHeight: 260 }}>
                   <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, letterSpacing: '0.2em', color: 'var(--color-secondary)' }}>{it.n}</div>
                   <h3 className="t-h3" style={{ marginTop: 18 }}>{it.t}</h3>
                   <p style={{ marginTop: 14, fontSize: 14, color: 'var(--color-ink-soft)', lineHeight: 1.6 }}>{it.d}</p>

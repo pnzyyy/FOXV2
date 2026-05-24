@@ -121,7 +121,7 @@ export default function VerkaufPage() {
               { t: 'Beratung 360°', d: 'Vor dem Verkauf, während der Vermarktung und nach dem Notartermin. Wir sind dabei, solange es nötig ist.' },
             ].map((it, i) => (
               <Reveal key={i} delay={i * 50}>
-                <div style={{ background: 'var(--color-background)', padding: 32, minHeight: 200 }}>
+                <div style={{ background: 'var(--color-background)', padding: 40, minHeight: 260 }}>
                   <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, letterSpacing: '0.2em', color: 'var(--color-secondary)' }}>0{i + 1}</div>
                   <h3 className="t-h3" style={{ marginTop: 18 }}>{it.t}</h3>
                   <p style={{ marginTop: 14, fontSize: 14, color: 'var(--color-ink-soft)', lineHeight: 1.6 }}>{it.d}</p>
