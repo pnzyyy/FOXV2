@@ -77,7 +77,7 @@ export default function KontaktPage() {
                   <div style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--color-secondary)' }}>✓ Anfrage erhalten</div>
                   <h2 className="t-h2" style={{ marginTop: 24 }}>Vielen Dank, <em>{form.name || '—'}</em>.</h2>
                   <p className="t-lead" style={{ marginTop: 24 }}>
-                    Wir haben Ihre Anfrage erhalten und melden uns innerhalb von 24 Stunden. Bei dringenden Anliegen: <a href="tel:+4961512789400" style={{ color: 'var(--color-secondary)' }}>+49 6151 27 89 40</a>.
+                    Wir haben Ihre Anfrage erhalten und melden uns innerhalb von 24 Stunden. Bei dringenden Anliegen: <a href="tel:+496151278940" style={{ color: 'var(--color-secondary)' }}>+49 6151 27 89 40</a>.
                   </p>
                   <button className="link-line" style={{ marginTop: 32 }} onClick={() => { setSubmitted(false); setForm({ name: '', email: '', phone: '', message: '', anliegen: 'Marktwert­analyse' }); }}>
                     Neue Anfrage <span className="arrow">→</span>
@@ -93,7 +93,7 @@ export default function KontaktPage() {
               </div>
               <div className="cc-row">
                 <span className="k">Telefon</span>
-                <a href="tel:+4961512789400" className="v">+49 6151 27 89 40</a>
+                <a href="tel:+496151278940" className="v">+49 6151 27 89 40</a>
               </div>
               <div className="cc-row">
                 <span className="k">E-Mail</span>
