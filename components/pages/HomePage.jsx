@@ -6,6 +6,7 @@ import ArchImage from '@/components/ArchImage';
 import ListingCard from '@/components/ListingCard';
 import FoxMark from '@/components/FoxMark';
 import AnimatedNumber from '@/components/AnimatedNumber';
+import HeroTypewriter from '@/components/HeroTypewriter';
 import { LISTINGS } from '@/lib/data';
 
 export default function HomePage() {
@@ -39,10 +40,7 @@ export default function HomePage() {
           </div>
         </div>
         <div className="hero-content">
-          <h1 className="t-display hero-title hero-title-reveal">
-            <span className="hero-line">Immobilien mit <em>Haltung.</em></span>
-            <span className="hero-line">Verwaltung mit <em>Vorsprung.</em></span>
-          </h1>
+          <HeroTypewriter />
           <div className="hero-meta">
             <div className="hero-meta-item">
               <span className="k">Standort</span>
