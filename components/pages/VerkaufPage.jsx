@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Reveal from '@/components/Reveal';
-import ArchImage from '@/components/ArchImage';
 import FoxMark from '@/components/FoxMark';
 import PageHeader from '@/components/PageHeader';
 
@@ -19,7 +18,11 @@ export default function VerkaufPage() {
           <div className="split">
             <Reveal kind="image">
               <div className="img-frame" style={{ aspectRatio: '4/5' }}>
-                <ArchImage seed="verkauf-vill" label="Villa Mathildenhöhe · Salon" style={{ width: '100%', height: '100%' }} />
+                <img
+                  src="/images/arch-modern.jpg"
+                  alt="Moderne Architektur — FOX Immobilien Darmstadt"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
+                />
               </div>
             </Reveal>
             <div>

@@ -36,7 +36,11 @@ export default function HomePage() {
       <section className="hero" aria-label="Headline">
         <div className="hero-media">
           <div ref={heroImgRef} style={{ position: 'absolute', inset: 0 }}>
-            <ArchImage seed="hero-villa" dark label="" style={{ width: '100%', height: '100%' }} />
+            <img
+              src="/images/jugendstil.jpg"
+              alt="Jugendstil-Architektur Darmstadt"
+              style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 25%' }}
+            />
           </div>
         </div>
         <div className="hero-content">
@@ -286,7 +290,11 @@ export default function HomePage() {
           <div className="split">
             <Reveal kind="image">
               <div className="img-frame" style={{ aspectRatio: '4/5' }}>
-                <ArchImage seed="story-1998" dark label="Stammhaus Rheinstraße · 1998" style={{ width: '100%', height: '100%' }} />
+                <img
+                  src="/images/balcony-bw.jpg"
+                  alt="Architektur Darmstadt — Balkone"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
+                />
               </div>
             </Reveal>
             <div>
