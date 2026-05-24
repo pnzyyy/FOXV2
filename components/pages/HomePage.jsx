@@ -39,9 +39,6 @@ export default function HomePage() {
           </div>
         </div>
         <div className="hero-content">
-          <div className="hero-eyebrow t-eyebrow" style={{ color: 'rgba(255,255,255,0.78)', marginBottom: 32 }}>
-            Inhabergeführt seit 1998 · Darmstadt
-          </div>
           <h1 className="t-display hero-title hero-title-reveal">
             <span className="hero-line">Immobilien mit <em>Haltung.</em></span>
             <span className="hero-line">Verwaltung mit <em>Vorsprung.</em></span>
