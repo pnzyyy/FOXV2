@@ -1,5 +1,5 @@
 /* global React, ReactDOM,
-   RouterProvider, useRouter, Nav, Footer,
+   RouterProvider, useRouter, Nav, Footer, ScrollProgress,
    HomePage, VerkaufPage, VerwaltungPage, ObjektePage, ObjektDetailPage,
    UeberUnsPage, KontaktPage, ImpressumPage, DatenschutzPage */
 const { useEffect: useEffectApp } = React;
@@ -43,6 +43,7 @@ function App() {
   }, []);
   return (
     <RouterProvider>
+      <ScrollProgress />
       <PageSwitcher />
     </RouterProvider>
   );

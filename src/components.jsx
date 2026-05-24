@@ -361,8 +361,55 @@ const TEAM = [
   },
 ];
 
+/* ============================================================
+   Scroll progress bar
+   ============================================================ */
+function ScrollProgress() {
+  const [pct, setPct] = useState(0);
+  useEffect(() => {
+    const update = () => {
+      const h = document.body.scrollHeight - window.innerHeight;
+      setPct(h > 0 ? (window.scrollY / h) * 100 : 0);
+    };
+    window.addEventListener("scroll", update, { passive: true });
+    update();
+    return () => window.removeEventListener("scroll", update);
+  }, []);
+  return <div className="scroll-progress" style={{ width: pct + "%" }} aria-hidden="true" />;
+}
+
+/* ============================================================
+   Animated counter (count-up on intersection)
+   ============================================================ */
+function AnimatedNumber({ to, suffix = "" }) {
+  const [val, setVal] = useState(0);
+  const ref = useRef(null);
+  useEffect(() => {
+    if (to === 0) return;
+    const el = ref.current;
+    if (!el) return;
+    const io = new IntersectionObserver(([e]) => {
+      if (!e.isIntersecting) return;
+      io.disconnect();
+      const duration = 1500;
+      const start = performance.now();
+      const tick = (now) => {
+        const t = Math.min((now - start) / duration, 1);
+        const ease = 1 - Math.pow(1 - t, 3);
+        setVal(Math.round(ease * to));
+        if (t < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }, { threshold: 0.4 });
+    io.observe(el);
+    return () => io.disconnect();
+  }, [to]);
+  return <span ref={ref}>{val}{suffix}</span>;
+}
+
 /* expose to other scripts */
 Object.assign(window, {
   React, RouterProvider, RouterContext, useRouter, Reveal, ArchImage,
   Logo, FoxMark, FoxWordmark, Nav, Footer, ListingCard, LISTINGS, TEAM,
+  ScrollProgress, AnimatedNumber,
 });

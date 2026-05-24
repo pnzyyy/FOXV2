@@ -1,4 +1,4 @@
-/* global React, useRouter, Reveal, ArchImage, ListingCard, LISTINGS, FoxMark */
+/* global React, useRouter, Reveal, ArchImage, ListingCard, LISTINGS, FoxMark, AnimatedNumber */
 const { useEffect: useEffectH, useState: useStateH, useRef: useRefH } = React;
 
 /* ============================================================
@@ -37,16 +37,13 @@ function HomePage() {
             <ArchImage seed="hero-villa" dark label="" style={{ width: "100%", height: "100%" }} />
           </div>
         </div>
-        {/* Eyebrow pinned below nav — never overlaps logo or title */}
-        <div style={{ position: "absolute", top: 96, left: "var(--gutter)", zIndex: 3 }}>
-          <div className="hero-eyebrow t-eyebrow" style={{ color: "rgba(255,255,255,0.78)" }}>
+        <div className="hero-content">
+          <div className="hero-eyebrow t-eyebrow" style={{ color: "rgba(255,255,255,0.78)", marginBottom: 32 }}>
             Inhabergeführt seit 1998 · Darmstadt
           </div>
-        </div>
-        <div className="hero-content">
-          <h1 className="t-display hero-title">
-            Immobilien mit <em>Haltung.</em><br />
-            Verwaltung mit <em>Vorsprung.</em>
+          <h1 className="t-display hero-title hero-title-reveal">
+            <span className="hero-line">Immobilien mit <em>Haltung.</em></span>
+            <span className="hero-line">Verwaltung mit <em>Vorsprung.</em></span>
           </h1>
           <div className="hero-meta">
             <div className="hero-meta-item">
@@ -114,7 +111,8 @@ function HomePage() {
       </div>
 
       {/* INTRO / EDITORIAL */}
-      <section className="section">
+      <section className="section" style={{ position: "relative", overflow: "hidden" }}>
+        <span className="ghost-num" aria-hidden="true">01</span>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: "clamp(48px, 8vw, 140px)", alignItems: "start" }}>
             <Reveal>
@@ -159,17 +157,17 @@ function HomePage() {
           <div className="stats-row" style={{ border: "none" }}>
             <div className="stat">
               <span className="stat-k">WEG-Verwaltung</span>
-              <span className="stat-v">28<sup>Jahre</sup></span>
+              <span className="stat-v"><AnimatedNumber to={28} /><sup>Jahre</sup></span>
               <span className="stat-desc">Ununterbrochene Verwaltung von Eigentümergemeinschaften im Rhein-Main-Gebiet.</span>
             </div>
             <div className="stat">
               <span className="stat-k">Maklertätigkeit</span>
-              <span className="stat-v">20<sup>+</sup></span>
+              <span className="stat-v"><AnimatedNumber to={20} /><sup>+</sup></span>
               <span className="stat-desc">Jahre Premium-Verkauf mit §34c GewO-Zulassung, regional verankert in Darmstadt.</span>
             </div>
             <div className="stat">
               <span className="stat-k">Familiengeführt</span>
-              <span className="stat-v">2<sup>Gen.</sup></span>
+              <span className="stat-v"><AnimatedNumber to={2} /><sup>Gen.</sup></span>
               <span className="stat-desc">Jörn Meenenga (Gründer) und Michel Meenenga (Junior Geschäftsführung).</span>
             </div>
             <div className="stat">
@@ -182,7 +180,8 @@ function HomePage() {
       </section>
 
       {/* SERVICES */}
-      <section className="section">
+      <section className="section" style={{ position: "relative", overflow: "hidden" }}>
+        <span className="ghost-num" aria-hidden="true">02</span>
         <div className="container">
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "end", gap: 32, marginBottom: 64, flexWrap: "wrap" }}>
             <Reveal>
@@ -269,7 +268,8 @@ function HomePage() {
       </section>
 
       {/* EDITORIAL: HISTORY SPLIT */}
-      <section className="section section-dark">
+      <section className="section section-dark" style={{ position: "relative", overflow: "hidden" }}>
+        <span className="ghost-num light" aria-hidden="true">03</span>
         <div className="container">
           <div className="split">
             <Reveal kind="image">
