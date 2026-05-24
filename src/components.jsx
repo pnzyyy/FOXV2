@@ -246,9 +246,9 @@ function Footer() {
               <img src="assets/fox-logo-bw.png" alt="FOX Immobilien" className="fox-logo-img" style={{ height: 56, width: "auto", filter: "grayscale(1) invert(1)" }} />
             </div>
             <p className="footer-tagline">Familienunternehmen seit 1998. <em style={{ color: "var(--color-secondary)" }}>Verwaltung mit Vorsprung. Verkauf mit Haltung.</em></p>
-            <div style={{ marginTop: 36, fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(255,255,255,0.55)" }}>
+            <address style={{ marginTop: 36, fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(255,255,255,0.55)", fontStyle: "normal" }}>
               Rheinstraße 41<br />64283 Darmstadt
-            </div>
+            </address>
           </div>
           <div>
             <h4>Leistungen</h4>
