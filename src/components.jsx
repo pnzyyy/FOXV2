@@ -153,7 +153,7 @@ function FoxMark({ size = 44, style = {}, alt = "FOX" }) {
       alt={alt}
       width={size}
       height={size}
-      style={{ display: "block", width: size, height: size, objectFit: "cover", flexShrink: 0, ...style }}
+      style={{ display: "block", width: size, height: size, objectFit: "contain", flexShrink: 0, ...style }}
     />
   );
 }
@@ -192,7 +192,6 @@ function Logo({ onClick }) {
 const NAV_ITEMS = [
   { key: "verkauf", label: "Verkauf" },
   { key: "verwaltung", label: "Verwaltung" },
-  { key: "objekte", label: "Objekte" },
   { key: "ueber-uns", label: "Über uns" },
   { key: "kontakt", label: "Kontakt" },
 ];

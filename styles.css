@@ -11,8 +11,8 @@
   --color-muted: #E8E6E1;
   --color-line: rgba(26, 29, 33, 0.12);
   --color-line-strong: rgba(26, 29, 33, 0.24);
-  --color-ink-soft: rgba(26, 29, 33, 0.62);
-  --color-ink-faint: rgba(26, 29, 33, 0.42);
+  --color-ink-soft: rgba(26, 29, 33, 0.74);
+  --color-ink-faint: rgba(26, 29, 33, 0.56);
 
   --font-display: "Cormorant Garamond", "EB Garamond", "Times New Roman", serif;
   --font-body: "Manrope", "Söhne", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -111,7 +111,7 @@ img { display: block; max-width: 100%; }
   max-width: 56ch;
 }
 
-.t-body { font-size: 15.5px; line-height: 1.65; color: var(--color-ink-soft); font-weight: 400; }
+.t-body { font-size: 16px; line-height: 1.7; color: var(--color-ink-soft); font-weight: 400; }
 
 .t-meta {
   font-family: var(--font-mono);

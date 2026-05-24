@@ -37,8 +37,13 @@ function HomePage() {
             <ArchImage seed="hero-villa" dark label="" style={{ width: "100%", height: "100%" }} />
           </div>
         </div>
+        {/* Eyebrow pinned below nav — never overlaps logo or title */}
+        <div style={{ position: "absolute", top: 96, left: "var(--gutter)", zIndex: 3 }}>
+          <div className="hero-eyebrow t-eyebrow" style={{ color: "rgba(255,255,255,0.78)" }}>
+            Inhabergeführt seit 1998 · Darmstadt
+          </div>
+        </div>
         <div className="hero-content">
-          <div className="hero-eyebrow t-eyebrow">Inhabergeführt seit 1998 · Darmstadt</div>
           <h1 className="t-display hero-title">
             Immobilien mit <em>Haltung.</em><br />
             Verwaltung mit <em>Vorsprung.</em>
