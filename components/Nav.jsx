@@ -10,7 +10,7 @@ const NAV_ITEMS = [
   { key: 'kontakt', label: 'Kontakt', href: '/kontakt' },
 ];
 
-export default function Nav({ darkOnTop = false }) {
+export default function Nav() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -19,8 +19,12 @@ export default function Nav({ darkOnTop = false }) {
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  // hero pages have a dark full-bleed image — keep nav white until scrolled
+  const isDarkHero = pathname === '/' && !scrolled;
+
   return (
-    <nav className={`nav ${scrolled ? 'scrolled' : ''} ${darkOnTop ? 'theme-dark' : ''}`}>
+    <nav className={`nav ${scrolled ? 'scrolled' : ''} ${isDarkHero ? 'theme-dark' : ''}`}>
       <Link href="/" className="logo-mark" aria-label="FOX Immobilien Darmstadt">
         <img
           src="/assets/fox-logo-bw.png"

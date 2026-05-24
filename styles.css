@@ -972,6 +972,7 @@ img { display: block; max-width: 100%; }
 
 /* logo greyscale filter (original is color jpg) */
 .fox-logo-img { filter: grayscale(1); }
+.nav.theme-dark:not(.scrolled) .fox-logo-img { filter: grayscale(1) invert(1); }
 
 /* ---------- Scroll progress bar ---------- */
 .scroll-progress {
