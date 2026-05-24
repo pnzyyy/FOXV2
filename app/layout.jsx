@@ -38,7 +38,7 @@ const localBusinessSchema = {
   url: BASE_URL,
   logo: `${BASE_URL}/assets/fox-logo-bw.png`,
   image: `${BASE_URL}/assets/fox-logo-bw.png`,
-  telephone: '+49-6151-27-89-40',
+  telephone: '+49 6151 27 89 40',
   email: 'meenenga@fox-da.de',
   foundingDate: '1998',
   numberOfEmployees: { '@type': 'QuantitativeValue', value: 12 },

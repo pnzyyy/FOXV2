@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /impressum
-Disallow: /datenschutz
 
 Sitemap: https://www.fox-da.de/sitemap.xml

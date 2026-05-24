@@ -5,7 +5,13 @@ import { useState, useEffect } from 'react';
 
 const NAV_ITEMS = [
   { key: 'verkauf', label: 'Verkauf', href: '/verkauf' },
-  { key: 'weg-verwaltung', label: 'Verwaltung', href: '/weg-verwaltung' },
+  {
+    key: 'verwaltung', label: 'Verwaltung', href: '/weg-verwaltung',
+    children: [
+      { label: 'WEG-Verwaltung', href: '/weg-verwaltung' },
+      { label: 'Mietverwaltung', href: '/mietverwaltung' },
+    ],
+  },
   { key: 'ueber-uns', label: 'Über uns', href: '/ueber-uns' },
   { key: 'kontakt', label: 'Kontakt', href: '/kontakt' },
 ];
@@ -37,13 +43,32 @@ export default function Nav() {
         <span className="sub">Immobilien<br />Darmstadt · Rhein-Main</span>
       </Link>
       <div className="nav-links">
-        {NAV_ITEMS.map((it) => (
-          <Link
-            key={it.key}
-            href={it.href}
-            className={`nav-link ${pathname === it.href || pathname?.startsWith(it.href + '/') ? 'active' : ''}`}
-          >{it.label}</Link>
-        ))}
+        {NAV_ITEMS.map((it) => {
+          const isActive = pathname === it.href || pathname?.startsWith(it.href + '/') ||
+            it.children?.some(c => pathname === c.href);
+          if (it.children) {
+            return (
+              <div key={it.key} className="nav-dropdown">
+                <Link href={it.href} className={`nav-link ${isActive ? 'active' : ''}`}>
+                  {it.label}
+                  <span className="nav-chevron" aria-hidden="true">›</span>
+                </Link>
+                <div className="nav-dropdown-menu">
+                  {it.children.map(c => (
+                    <Link key={c.href} href={c.href}
+                      className={`nav-dropdown-item ${pathname === c.href ? 'active' : ''}`}>
+                      {c.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            );
+          }
+          return (
+            <Link key={it.key} href={it.href}
+              className={`nav-link ${isActive ? 'active' : ''}`}>{it.label}</Link>
+          );
+        })}
       </div>
       <div className="nav-right">
         <span className="nav-cta-line" aria-hidden="true">

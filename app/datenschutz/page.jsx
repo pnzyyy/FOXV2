@@ -4,7 +4,7 @@ export const metadata = {
   title: 'Datenschutz · FOX Immobilien GmbH',
   description: 'Datenschutzerklärung der FOX Immobilien GmbH gemäß DSGVO. Rheinstraße 41, 64283 Darmstadt.',
   alternates: { canonical: 'https://www.fox-da.de/datenschutz' },
-  robots: { index: false, follow: false },
+  robots: { index: false, follow: true },
 };
 
 export default function Page() {

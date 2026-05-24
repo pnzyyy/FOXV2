@@ -1,4 +1,3 @@
-'use client';
 import Link from 'next/link';
 import Reveal from '@/components/Reveal';
 import PageHeader from '@/components/PageHeader';
@@ -77,6 +76,28 @@ export default function WegVerwaltungPage() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* LOCAL SEO */}
+      <section className="section-tight">
+        <div className="container">
+          <Reveal>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: 64, alignItems: 'start' }}>
+              <div>
+                <div className="t-eyebrow">Tätigkeitsgebiet</div>
+                <h2 className="t-h2" style={{ marginTop: 24 }}>WEG-Verwaltung in <em>Darmstadt</em> und dem Rhein-Main-Gebiet.</h2>
+              </div>
+              <div>
+                <p className="t-lead">Unser Verwaltungsbestand konzentriert sich auf Darmstadt und das unmittelbare Umland: Mühltal, Weiterstadt, Griesheim, Pfungstadt und die Rhein-Main-Achse bis Frankfurt. Alle Stadtteile sind uns vertraut — von der Mathildenhöhe bis Kranichstein, von Bessungen bis Eberstadt.</p>
+                <div style={{ marginTop: 32, display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                  {['Mathildenhöhe','Bessungen','Paulusviertel','Johannesviertel','Eberstadt','Rosenhöhe','Kranichstein','Mühltal','Weiterstadt','Griesheim'].map(d => (
+                    <span key={d} style={{ fontFamily: 'var(--font-mono)', fontSize: 9.5, letterSpacing: '0.15em', textTransform: 'uppercase', padding: '5px 12px', border: '1px solid var(--color-line)', color: 'var(--color-ink-faint)' }}>{d}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 

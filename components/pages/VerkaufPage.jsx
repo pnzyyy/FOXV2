@@ -1,4 +1,3 @@
-'use client';
 import Link from 'next/link';
 import Reveal from '@/components/Reveal';
 import ArchImage from '@/components/ArchImage';

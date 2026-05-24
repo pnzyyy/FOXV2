@@ -162,6 +162,45 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* LOCAL SEO — Darmstadt service areas */}
+      <section className="section-tight" style={{ background: 'var(--color-muted)' }}>
+        <div className="container">
+          <Reveal>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 2.2fr', gap: 'clamp(40px, 6vw, 96px)', alignItems: 'start' }}>
+              <div>
+                <div className="t-eyebrow">Lokale Expertise</div>
+                <h2 className="t-h2" style={{ marginTop: 24 }}>
+                  Immobilien­experten für <em>Darmstadt</em> und Rhein-Main.
+                </h2>
+              </div>
+              <div>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 1, background: 'var(--color-line)', border: '1px solid var(--color-line)', marginBottom: 40 }}>
+                  {[
+                    { href: '/verkauf',          label: 'Immobilienverkauf Darmstadt',    desc: 'Premium-Verkauf seit 2004 — §34c GewO.' },
+                    { href: '/weg-verwaltung',   label: 'WEG-Verwaltung Darmstadt',       desc: '28 Jahre Erfahrung, §26a-zertifiziert.' },
+                    { href: '/mietverwaltung',   label: 'Mietverwaltung Darmstadt',       desc: 'MFH, Gewerbe und Sondereigentum.' },
+                    { href: '/marktwertanalyse', label: 'Immobilienbewertung Darmstadt',  desc: 'Kostenfreie Marktwertanalyse in 14 Tagen.' },
+                  ].map((s, i) => (
+                    <Reveal key={s.href} delay={i * 60}>
+                      <Link href={s.href} style={{ display: 'block', background: 'var(--color-muted)', padding: '28px 32px', textDecoration: 'none', color: 'inherit', transition: 'background 0.3s' }} className="local-card">
+                        <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--color-secondary)', marginBottom: 12 }}>→</div>
+                        <div style={{ fontFamily: 'var(--font-display)', fontSize: 20, fontWeight: 400, lineHeight: 1.2 }}>{s.label}</div>
+                        <div style={{ marginTop: 10, fontSize: 13, color: 'var(--color-ink-faint)', fontFamily: 'var(--font-mono)', letterSpacing: '0.08em' }}>{s.desc}</div>
+                      </Link>
+                    </Reveal>
+                  ))}
+                </div>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                  {['Mathildenhöhe','Bessungen','Paulusviertel','Johannesviertel','Rosenhöhe','Eberstadt','Kranichstein','Mühltal','Rhein-Main'].map(d => (
+                    <span key={d} style={{ fontFamily: 'var(--font-mono)', fontSize: 9.5, letterSpacing: '0.18em', textTransform: 'uppercase', padding: '6px 14px', border: '1px solid var(--color-line-strong)', color: 'var(--color-ink-faint)' }}>{d}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* SERVICES */}
       <section className="section" style={{ position: 'relative', overflow: 'hidden' }}>
         <span className="ghost-num" aria-hidden="true">02</span>

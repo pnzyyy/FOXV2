@@ -1,4 +1,3 @@
-'use client';
 import Link from 'next/link';
 import Reveal from '@/components/Reveal';
 import PageHeader from '@/components/PageHeader';
@@ -77,6 +76,28 @@ export default function MietverwaltungPage() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* LOCAL SEO */}
+      <section className="section-tight">
+        <div className="container">
+          <Reveal>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: 64, alignItems: 'start' }}>
+              <div>
+                <div className="t-eyebrow">Tätigkeitsgebiet</div>
+                <h2 className="t-h2" style={{ marginTop: 24 }}>Mietverwaltung in <em>Darmstadt</em> — Wohn- und Gewerbeobjekte.</h2>
+              </div>
+              <div>
+                <p className="t-lead">Wir verwalten Mehrfamilienhäuser, Gewerbeobjekte und einzelne Wohnungsbestände in Darmstadt und dem Rhein-Main-Gebiet. Ob Bessungen, Paulusviertel oder Eberstadt — kurze Wege zu Ihrem Objekt sind für uns selbstverständlich.</p>
+                <div style={{ marginTop: 32, display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                  {['Mathildenhöhe','Bessungen','Paulusviertel','Johannesviertel','Eberstadt','Rosenhöhe','Kranichstein','Griesheim','Weiterstadt','Pfungstadt'].map(d => (
+                    <span key={d} style={{ fontFamily: 'var(--font-mono)', fontSize: 9.5, letterSpacing: '0.15em', textTransform: 'uppercase', padding: '5px 12px', border: '1px solid var(--color-line)', color: 'var(--color-ink-faint)' }}>{d}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
