@@ -185,7 +185,7 @@ img { display: block; max-width: 100%; }
 }
 .logo-mark .sub {
   font-family: var(--font-mono);
-  font-size: 9.5px;
+  font-size: 12.5px;
   letter-spacing: 0.32em;
   font-weight: 500;
   color: var(--color-ink-faint);
@@ -200,9 +200,11 @@ img { display: block; max-width: 100%; }
   display: flex;
   gap: 36px;
   align-items: center;
+  margin-left: auto;
+  margin-right: 40px;
 }
 .nav-link {
-  font-size: 13px;
+  font-size: 17.5px;
   letter-spacing: 0.04em;
   color: var(--color-primary);
   text-decoration: none;
@@ -229,7 +231,7 @@ img { display: block; max-width: 100%; }
 .nav.theme-dark:not(.scrolled) .nav-link.active { color: var(--color-secondary-soft); }
 
 .nav-right { display: flex; align-items: center; gap: 24px; }
-.nav-cta-line { font-size: 12px; color: var(--color-ink-soft); display: flex; align-items: center; gap: 8px; }
+.nav-cta-line { font-size: 16px; color: var(--color-ink-soft); display: flex; align-items: center; gap: 8px; }
 .nav-cta-line .dot-live { width: 6px; height: 6px; background: #5fb878; border-radius: 50%; box-shadow: 0 0 0 4px rgba(95,184,120,0.18); }
 
 /* ---------- Buttons ---------- */

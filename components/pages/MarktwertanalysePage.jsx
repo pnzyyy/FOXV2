@@ -99,7 +99,7 @@ export default function MarktwertanalysePage() {
                   <div style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--color-secondary)' }}>✓ Anfrage erhalten</div>
                   <h2 className="t-h2" style={{ marginTop: 24 }}>Vielen Dank, <em>{form.name || '—'}</em>.</h2>
                   <p className="t-lead" style={{ marginTop: 24 }}>
-                    Wir melden uns innerhalb von 24 Stunden. Bei dringenden Anfragen: <a href="tel:+496151278940" style={{ color: 'var(--color-secondary)' }}>+49 6151 27 89 40</a>
+                    Wir melden uns innerhalb von 24 Stunden. Bei dringenden Anfragen: <a href="tel:+49615151522" style={{ color: 'var(--color-secondary)' }}>06151 151522</a>
                   </p>
                 </div>
               )}
@@ -112,7 +112,7 @@ export default function MarktwertanalysePage() {
               </div>
               <div className="cc-row">
                 <span className="k">Telefon</span>
-                <a href="tel:+496151278940" className="v">+49 6151 27 89 40</a>
+                <a href="tel:+49615151522" className="v">06151 151522</a>
               </div>
               <div className="cc-row">
                 <span className="k">E-Mail</span>

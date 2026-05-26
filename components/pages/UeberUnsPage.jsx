@@ -112,14 +112,6 @@ export default function UeberUnsPage() {
               </Reveal>
             ))}
           </div>
-          <Reveal delay={300}>
-            <div style={{ marginTop: 80, paddingTop: 40, borderTop: '1px solid var(--color-line)', display: 'grid', gridTemplateColumns: 'auto 1fr', gap: 32, alignItems: 'center' }}>
-              <div className="t-meta">Hinter den Geschäftsführern</div>
-              <p className="t-body" style={{ maxWidth: '70ch' }}>
-                Ein zwölfköpfiges Team aus Verwaltern, Sales Consultants, einer Klientenbetreuung und einem Digital-Lead trägt die tägliche Arbeit. Jeder Mitarbeiter ist seit mindestens vier Jahren im Haus — Fluktuation gehört bei uns nicht zur Geschäftsstrategie.
-              </p>
-            </div>
-          </Reveal>
         </div>
       </section>
 

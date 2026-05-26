@@ -120,7 +120,7 @@ export default function VerkaufPage() {
               { t: 'Drohnenaufnahmen', d: 'Kontextaufnahmen, die das Objekt im Stadtteil verorten — ein Werkzeug, das wir konsequent nutzen.' },
               { t: 'Vermarktungsvideo', d: 'Cineastische Filmproduktion zu jeder Premium-Immobilie. Schnitt, Ton, Farbe — alles im Haus produziert.' },
               { t: 'Umfangreiches Exposé', d: 'Redaktioneller Text, Architekturfotografie, Grundrisse, Energieausweis — gedruckt und digital.' },
-              { t: 'Beratung 360°', d: 'Vor dem Verkauf, während der Vermarktung und nach dem Notartermin. Wir sind dabei, solange es nötig ist.' },
+              { t: 'Beratung vollumfänglich', d: 'Vor dem Verkauf, während der Vermarktung und nach dem Notartermin. Wir sind dabei, solange es nötig ist.' },
             ].map((it, i) => (
               <Reveal key={i} delay={i * 50}>
                 <div className="feature-card">

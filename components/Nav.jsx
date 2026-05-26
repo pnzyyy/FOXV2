@@ -93,10 +93,6 @@ export default function Nav() {
 
         {/* Desktop Right */}
         <div className="nav-right">
-          <span className="nav-cta-line" aria-hidden="true">
-            <span className="dot-live" />
-            <span>+49 6151 27 89 40</span>
-          </span>
           <Link href="/marktwertanalyse" className="nav-link" style={{ fontWeight: 600 }}>
             Bewertung anfragen ↗
           </Link>
@@ -151,8 +147,8 @@ export default function Nav() {
         <div className="nav-mobile-footer">
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 14 }}>
             <span className="dot-live" style={{ width: 6, height: 6, background: '#5fb878', borderRadius: '50%', boxShadow: '0 0 0 4px rgba(95,184,120,0.18)' }} />
-            <a href="tel:+496151278940" style={{ color: 'inherit', textDecoration: 'none', fontFamily: 'var(--font-mono)' }}>
-              +49 6151 27 89 40
+            <a href="tel:+49615151522" style={{ color: 'inherit', textDecoration: 'none', fontFamily: 'var(--font-mono)' }}>
+              06151 151522
             </a>
           </div>
           <Link
