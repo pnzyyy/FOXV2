@@ -23,7 +23,7 @@ export default function MarktwertanalysePage() {
       {/* WHY FOX */}
       <section className="section-tight" style={{ background: 'var(--color-muted)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 1, background: 'rgba(26,29,33,0.08)', border: '1px solid rgba(26,29,33,0.08)' }}>
+          <div className="feature-grid" style={{ background: 'rgba(26,29,33,0.08)', borderColor: 'rgba(26,29,33,0.08)', gridTemplateColumns: 'repeat(2, 1fr)' }}>
             {[
               { n: '01', t: 'Lokal verwurzelt', d: 'Über 28 Jahre Transaktionsdaten im Raum Darmstadt und Rhein-Main — kein Algorithmus, sondern gelebte Marktkenntnis.' },
               { n: '02', t: 'Persönlich', d: 'Kein Online-Tool. Ein Gespräch vor Ort, bei dem wir Ihre Immobilie wirklich kennenlernen.' },
@@ -31,10 +31,10 @@ export default function MarktwertanalysePage() {
               { n: '04', t: 'Vertraulich', d: 'Ihre Daten werden ausschließlich intern genutzt. Kein CRM-Weiterverkauf, kein Massen-Mailing.' },
             ].map((it, i) => (
               <Reveal key={i} delay={i * 60}>
-                <div style={{ background: 'var(--color-muted)', padding: 32 }}>
+                <div className="feature-card" style={{ background: 'var(--color-muted)' }}>
                   <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, letterSpacing: '0.2em', color: 'var(--color-secondary)' }}>{it.n}</div>
-                  <h3 className="t-h3" style={{ marginTop: 16 }}>{it.t}</h3>
-                  <p style={{ marginTop: 12, fontSize: 14, color: 'var(--color-ink-soft)', lineHeight: 1.6 }}>{it.d}</p>
+                  <h3 className="t-h3" style={{ marginTop: 4 }}>{it.t}</h3>
+                  <p style={{ fontSize: 14, color: 'var(--color-ink-soft)', lineHeight: 1.6 }}>{it.d}</p>
                 </div>
               </Reveal>
             ))}
@@ -127,7 +127,7 @@ export default function MarktwertanalysePage() {
                 <span className="v" style={{ fontSize: 18 }}>Mo–Fr · 09:00–18:00<br />Sa · nach Vereinbarung</span>
               </div>
               <div style={{ paddingTop: 32, borderTop: '1px solid rgba(255,255,255,0.14)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <FoxMark size={48} />
+                <FoxMark size={48} variant="dark" />
                 <div style={{ textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)' }}>
                   IVD · BVFI<br />Mitglied seit 2003
                 </div>

@@ -108,7 +108,7 @@ export default function KontaktPage() {
                 <span className="v" style={{ fontSize: 18 }}>Mo–Fr · 09:00–18:00<br />Sa · nach Vereinbarung</span>
               </div>
               <div style={{ paddingTop: 32, borderTop: '1px solid rgba(255,255,255,0.14)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <FoxMark size={48} />
+                <FoxMark size={48} variant="dark" />
                 <div style={{ textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)' }}>IVD · BVFI<br />Mitglied seit 2003</div>
               </div>
             </div>

@@ -3,11 +3,9 @@ import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Reveal from '@/components/Reveal';
 import ArchImage from '@/components/ArchImage';
-import ListingCard from '@/components/ListingCard';
 import FoxMark from '@/components/FoxMark';
 import AnimatedNumber from '@/components/AnimatedNumber';
 import HeroTypewriter from '@/components/HeroTypewriter';
-import { LISTINGS } from '@/lib/data';
 
 export default function HomePage() {
   const heroImgRef = useRef(null);
@@ -28,7 +26,7 @@ export default function HomePage() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const featured = LISTINGS.slice(0, 4);
+
 
   return (
     <div className="page-shell">
@@ -37,9 +35,9 @@ export default function HomePage() {
         <div className="hero-media">
           <div ref={heroImgRef} style={{ position: 'absolute', inset: 0 }}>
             <img
-              src="/images/jugendstil.jpg"
-              alt="Jugendstil-Architektur Darmstadt"
-              style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 25%' }}
+              src="/images/mathildenhoehe.jpg"
+              alt="Mathildenhöhe Darmstadt — UNESCO Welterbe"
+              style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 30%' }}
             />
           </div>
         </div>
@@ -67,16 +65,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="hero-feature">
-          <div className="hf-label"><span className="pulse" />Off-Market · Neu im Bestand</div>
-          <div className="hf-title">Villa am Mathildenhöhe</div>
-          <div className="hf-sub">Jugendstil · 412 m² · Parkgrundstück</div>
-          <div className="hf-stats">
-            <div><span className="k">Wohnfläche</span><span className="v">412 m²</span></div>
-            <div><span className="k">Baujahr</span><span className="v">1908</span></div>
-            <div><span className="k">Preis</span><span className="v">€ 4,25 M</span></div>
-          </div>
-        </div>
+
 
         <div className="hero-scroll">
           <span className="hero-scroll-line" />
@@ -110,7 +99,7 @@ export default function HomePage() {
       <section className="section" style={{ position: 'relative', overflow: 'hidden' }}>
         <span className="ghost-num" aria-hidden="true">01</span>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 'clamp(48px, 8vw, 140px)', alignItems: 'start' }}>
+          <div className="grid-responsive" style={{ gridTemplateColumns: '1fr 1.4fr', gap: 'clamp(48px, 8vw, 140px)', alignItems: 'start' }}>
             <Reveal>
               <div className="t-eyebrow">Manifest</div>
               <div style={{ marginTop: 24, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.16em', color: 'var(--color-ink-faint)' }}>01 — EINLEITUNG</div>
@@ -170,7 +159,7 @@ export default function HomePage() {
       <section className="section-tight" style={{ background: 'var(--color-muted)' }}>
         <div className="container">
           <Reveal>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 2.2fr', gap: 'clamp(40px, 6vw, 96px)', alignItems: 'start' }}>
+            <div className="grid-responsive" style={{ gridTemplateColumns: '1fr 2.2fr', gap: 'clamp(40px, 6vw, 96px)', alignItems: 'start' }}>
               <div>
                 <div className="t-eyebrow">Lokale Expertise</div>
                 <h2 className="t-h2" style={{ marginTop: 24 }}>
@@ -178,7 +167,7 @@ export default function HomePage() {
                 </h2>
               </div>
               <div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 1, background: 'var(--color-line)', border: '1px solid var(--color-line)', marginBottom: 40 }}>
+                <div className="feature-grid" style={{ marginBottom: 40, gridTemplateColumns: 'repeat(2, 1fr)' }}>
                   {[
                     { href: '/verkauf',          label: 'Immobilienverkauf Darmstadt',    desc: 'Premium-Verkauf seit 2004 — §34c GewO.' },
                     { href: '/weg-verwaltung',   label: 'WEG-Verwaltung Darmstadt',       desc: '28 Jahre Erfahrung, §26a-zertifiziert.' },
@@ -186,7 +175,7 @@ export default function HomePage() {
                     { href: '/marktwertanalyse', label: 'Immobilienbewertung Darmstadt',  desc: 'Kostenfreie Marktwertanalyse in 14 Tagen.' },
                   ].map((s, i) => (
                     <Reveal key={s.href} delay={i * 60}>
-                      <Link href={s.href} style={{ display: 'block', background: 'var(--color-muted)', padding: '28px 32px', textDecoration: 'none', color: 'inherit', transition: 'background 0.3s' }} className="local-card">
+                      <Link href={s.href} style={{ display: 'flex', flexDirection: 'column', background: 'var(--color-muted)', padding: '28px 32px', textDecoration: 'none', color: 'inherit', transition: 'background 0.3s', width: '100%', height: '100%' }} className="local-card">
                         <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--color-secondary)', marginBottom: 12 }}>→</div>
                         <div style={{ fontFamily: 'var(--font-display)', fontSize: 20, fontWeight: 400, lineHeight: 1.2 }}>{s.label}</div>
                         <div style={{ marginTop: 10, fontSize: 13, color: 'var(--color-ink-faint)', fontFamily: 'var(--font-mono)', letterSpacing: '0.08em' }}>{s.desc}</div>
@@ -265,23 +254,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FEATURED OBJEKTE */}
-      <section className="section" style={{ paddingTop: 0 }}>
-        <div className="container">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'end', gap: 32, marginBottom: 56, flexWrap: 'wrap' }}>
-            <Reveal>
-              <div className="t-eyebrow">Ausgewählt</div>
-              <h2 className="t-h1" style={{ marginTop: 24 }}>Aktuelle <em>Objekte</em></h2>
-            </Reveal>
-            <Reveal delay={120}>
-              <Link href="/objekte" className="link-line">Alle Objekte ansehen <span className="arrow">→</span></Link>
-            </Reveal>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 56 }}>
-            {featured.map((l, i) => <ListingCard key={l.slug} l={l} index={i} />)}
-          </div>
-        </div>
-      </section>
+
 
       {/* EDITORIAL: HISTORY SPLIT */}
       <section className="section section-dark" style={{ position: 'relative', overflow: 'hidden' }}>
@@ -339,7 +312,7 @@ export default function HomePage() {
           <Reveal>
             <div className="t-eyebrow" style={{ marginBottom: 56 }}>Stimmen unserer Mandanten</div>
           </Reveal>
-          <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 0.6fr', gap: 80, alignItems: 'end' }}>
+          <div className="grid-responsive" style={{ gridTemplateColumns: '1.4fr 0.6fr', gap: 80, alignItems: 'end' }}>
             <Reveal delay={120}>
               <p className="pull-quote">Wir wurden nicht beraten, wir wurden begleitet. Das ist ein Unterschied, den man erst bemerkt, wenn er nicht da ist.</p>
             </Reveal>
@@ -356,7 +329,7 @@ export default function HomePage() {
       {/* TRANSPARENZ */}
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="container">
-          <div style={{ background: 'var(--color-muted)', padding: 'clamp(56px, 7vw, 96px)', display: 'grid', gridTemplateColumns: 'auto 1fr auto', gap: 'clamp(32px, 5vw, 80px)', alignItems: 'center', flexWrap: 'wrap' }}>
+          <div className="grid-responsive" style={{ background: 'var(--color-muted)', padding: 'clamp(56px, 7vw, 96px)', gridTemplateColumns: 'auto 1fr auto', gap: 'clamp(32px, 5vw, 80px)', alignItems: 'center', flexWrap: 'wrap' }}>
             <Reveal><FoxMark size={88} /></Reveal>
             <Reveal delay={100}>
               <div>
@@ -379,7 +352,7 @@ export default function HomePage() {
       {/* CTA CONTACT */}
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="container">
-          <div style={{ background: 'var(--color-primary)', color: 'var(--color-background)', padding: 'clamp(64px, 8vw, 120px) clamp(40px, 6vw, 96px)', display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: 64, alignItems: 'center' }}>
+          <div className="grid-responsive" style={{ background: 'var(--color-primary)', color: 'var(--color-background)', padding: 'clamp(64px, 8vw, 120px) clamp(40px, 6vw, 96px)', gridTemplateColumns: '1.4fr 1fr', gap: 64, alignItems: 'center' }}>
             <Reveal>
               <div className="t-eyebrow" style={{ color: 'rgba(255,255,255,0.6)' }}>Kostenfreie Marktwertanalyse</div>
               <h2 className="t-h1" style={{ color: 'var(--color-background)', marginTop: 24, maxWidth: '16ch' }}>Was ist Ihre Immobilie heute <em>wert</em>?</h2>

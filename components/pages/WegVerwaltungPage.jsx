@@ -45,7 +45,7 @@ export default function WegVerwaltungPage() {
       <section className="section">
         <div className="container">
           <Reveal>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: 80, marginBottom: 64 }}>
+            <div className="grid-responsive" style={{ gridTemplateColumns: '1fr 1.6fr', gap: 80, marginBottom: 64 }}>
               <div>
                 <div className="t-eyebrow">WEG-Verwaltung Darmstadt</div>
               </div>
@@ -58,7 +58,7 @@ export default function WegVerwaltungPage() {
             </div>
           </Reveal>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 1, background: 'var(--color-line)', border: '1px solid var(--color-line)' }}>
+          <div className="feature-grid">
             {[
               { n: '01', t: 'Eigentümerversammlung', d: 'Vorbereitung, Einladung, Durchführung und Protokollierung. Auf Wunsch als digitale Versammlung mit elektronischer Abstimmung.' },
               { n: '02', t: 'Hausgeld-Abrechnung', d: 'Transparente Jahresabrechnungen, pünktlich, vollständig und prüfbar — inklusive Wirtschaftsplan für das Folgejahr.' },
@@ -68,10 +68,10 @@ export default function WegVerwaltungPage() {
               { n: '06', t: 'Rechtliche Begleitung', d: 'Zusammenarbeit mit spezialisierten Fachanwälten für WEG-Recht bei Beschlussanfechtungen oder strittigen Maßnahmen.' },
             ].map((it, i) => (
               <Reveal key={i} delay={i * 60}>
-                <div style={{ background: 'var(--color-background)', padding: 40, minHeight: 260 }}>
+                <div className="feature-card">
                   <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, letterSpacing: '0.2em', color: 'var(--color-secondary)' }}>{it.n}</div>
-                  <h3 className="t-h3" style={{ marginTop: 18 }}>{it.t}</h3>
-                  <p style={{ marginTop: 14, fontSize: 14, color: 'var(--color-ink-soft)', lineHeight: 1.6 }}>{it.d}</p>
+                  <h3 className="t-h3" style={{ marginTop: 4 }}>{it.t}</h3>
+                  <p style={{ fontSize: 14, color: 'var(--color-ink-soft)', lineHeight: 1.6 }}>{it.d}</p>
                 </div>
               </Reveal>
             ))}
@@ -83,7 +83,7 @@ export default function WegVerwaltungPage() {
       <section className="section-tight">
         <div className="container">
           <Reveal>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: 64, alignItems: 'start' }}>
+            <div className="grid-responsive" style={{ gridTemplateColumns: '1fr 1.6fr', gap: 64, alignItems: 'start' }}>
               <div>
                 <div className="t-eyebrow">Tätigkeitsgebiet</div>
                 <h2 className="t-h2" style={{ marginTop: 24 }}>WEG-Verwaltung in <em>Darmstadt</em> und dem Rhein-Main-Gebiet.</h2>
@@ -105,7 +105,7 @@ export default function WegVerwaltungPage() {
       <section className="section-tight" style={{ background: 'var(--color-muted)' }}>
         <div className="container">
           <Reveal>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
+            <div className="grid-responsive" style={{ gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
               <div>
                 <div className="t-eyebrow">Weitere Verwaltungsleistung</div>
                 <h2 className="t-h2" style={{ marginTop: 24 }}>Auch <em>Mietverwaltung</em> aus einer Hand.</h2>
@@ -124,7 +124,7 @@ export default function WegVerwaltungPage() {
       {/* CTA */}
       <section className="section">
         <div className="container">
-          <div style={{ background: 'var(--color-muted)', padding: 'clamp(56px, 7vw, 96px)', display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: 56, alignItems: 'center' }}>
+          <div className="grid-responsive" style={{ background: 'var(--color-muted)', padding: 'clamp(56px, 7vw, 96px)', gridTemplateColumns: '1.4fr 1fr', gap: 56, alignItems: 'center' }}>
             <Reveal>
               <h2 className="t-h2">Übergeben Sie Ihre WEG an ein Haus, das seit 28 Jahren <em>nicht gewechselt</em> wurde.</h2>
             </Reveal>

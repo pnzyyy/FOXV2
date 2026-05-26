@@ -17,7 +17,7 @@ export default function UeberUnsPage() {
 
       <section className="section">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 'clamp(48px, 8vw, 140px)' }}>
+          <div className="grid-responsive" style={{ gridTemplateColumns: '1fr 1.4fr', gap: 'clamp(48px, 8vw, 140px)' }}>
             <Reveal>
               <FoxMark size={120} />
               <div style={{ marginTop: 32, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--color-ink-faint)' }}>
@@ -51,7 +51,7 @@ export default function UeberUnsPage() {
           <Reveal>
             <div className="t-eyebrow" style={{ marginBottom: 48 }}>Chronologie</div>
           </Reveal>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 1, background: 'rgba(26,29,33,0.12)' }}>
+          <div className="chrono-grid">
             {[
               { y: '1998', t: 'Gründung', d: 'Jörn Meenenga startet die Immobilienverwaltung in der Rheinstraße.' },
               { y: '2005', t: '§34c-Zulassung', d: 'Aufnahme der Maklertätigkeit, zunächst für Bestandskunden der Verwaltung.' },
@@ -61,7 +61,7 @@ export default function UeberUnsPage() {
               { y: '2026', t: 'Heute', d: 'Zwei Geschäftsführer, ein zwölfköpfiges Team, das gesamte Rhein-Main-Gebiet.' },
             ].map((it, i) => (
               <Reveal key={it.y} delay={i * 80}>
-                <div style={{ background: 'var(--color-muted)', padding: 32, minHeight: 220, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div className="chrono-card">
                   <div className="t-num" style={{ color: 'var(--color-secondary)' }}>{it.y}</div>
                   <div>
                     <div style={{ fontFamily: 'var(--font-display)', fontSize: 22, fontWeight: 400, marginTop: 24 }}>{it.t}</div>
@@ -89,7 +89,7 @@ export default function UeberUnsPage() {
           <div className="team-pair">
             {TEAM.map((p, i) => (
               <Reveal key={p.name} delay={i * 120}>
-                <div style={{ display: 'grid', gridTemplateRows: 'auto 1fr', gap: 32 }}>
+                <div style={{ display: 'grid', gridTemplateRows: 'auto 1fr', gap: 32, width: '100%', height: '100%' }}>
                   <div style={{ aspectRatio: '4/5', overflow: 'hidden', background: 'var(--color-muted)', position: 'relative' }}>
                     <ArchImage seed={'portrait-' + p.name} label={`Portrait ${p.name}`} style={{ width: '100%', height: '100%' }} />
                     <div style={{ position: 'absolute', top: 16, left: 16, fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--color-background)', background: 'rgba(20,22,26,0.55)', backdropFilter: 'blur(8px)', padding: '8px 12px' }}>
@@ -132,7 +132,7 @@ export default function UeberUnsPage() {
               <h2 className="t-h1" style={{ color: 'var(--color-background)', marginTop: 24 }}>Vier Prinzipien, an denen wir <em>nicht rütteln</em>.</h2>
             </div>
           </Reveal>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px,1fr))', gap: 1, background: 'rgba(255,255,255,0.1)' }}>
+          <div className="feature-grid" style={{ background: 'rgba(255,255,255,0.1)', borderColor: 'rgba(255,255,255,0.1)', gridTemplateColumns: 'repeat(2, 1fr)' }}>
             {[
               { n: '01', t: 'Diskretion', d: 'Wir reden nicht über Mandate. Auch nicht beim Abendessen. Auch nicht in zehn Jahren.' },
               { n: '02', t: 'Handwerk', d: 'Bewertungen, Exposés, Verträge — alles entsteht im Haus. Keine ausgelagerte Routine.' },
@@ -140,10 +140,10 @@ export default function UeberUnsPage() {
               { n: '04', t: 'Langfristigkeit', d: 'Die meisten unserer Mandate dauern länger als zehn Jahre. Manche länger als 25.' },
             ].map((v, i) => (
               <Reveal key={v.n} delay={i * 80}>
-                <div style={{ background: 'var(--color-primary)', padding: 40, minHeight: 280 }}>
+                <div className="feature-card" style={{ background: 'var(--color-primary)' }}>
                   <div style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.22em', color: 'var(--color-secondary)' }}>{v.n}</div>
-                  <div style={{ fontFamily: 'var(--font-display)', fontSize: 32, fontWeight: 400, marginTop: 32, color: 'var(--color-background)' }}>{v.t}</div>
-                  <p style={{ marginTop: 20, fontSize: 14.5, color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>{v.d}</p>
+                  <div style={{ fontFamily: 'var(--font-display)', fontSize: 32, fontWeight: 400, marginTop: 18, color: 'var(--color-background)' }}>{v.t}</div>
+                  <p style={{ marginTop: 6, fontSize: 14.5, color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>{v.d}</p>
                 </div>
               </Reveal>
             ))}
@@ -155,7 +155,7 @@ export default function UeberUnsPage() {
       <section className="section">
         <div className="container">
           <Reveal>
-            <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: 64, alignItems: 'center' }}>
+            <div className="grid-responsive" style={{ gridTemplateColumns: '1.4fr 1fr', gap: 64, alignItems: 'center' }}>
               <h2 className="t-h1" style={{ maxWidth: '18ch' }}>Lernen Sie uns <em>persönlich</em> kennen.</h2>
               <div>
                 <p className="t-lead">Wir nehmen uns Zeit für ein Gespräch ohne Anlass — bei einem Espresso in der Rheinstraße oder bei Ihnen vor Ort.</p>

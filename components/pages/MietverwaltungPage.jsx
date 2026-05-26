@@ -45,7 +45,7 @@ export default function MietverwaltungPage() {
       <section className="section">
         <div className="container">
           <Reveal>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: 80, marginBottom: 64 }}>
+            <div className="grid-responsive" style={{ gridTemplateColumns: '1fr 1.6fr', gap: 80, marginBottom: 64 }}>
               <div>
                 <div className="t-eyebrow">Mietverwaltung Darmstadt</div>
               </div>
@@ -58,7 +58,7 @@ export default function MietverwaltungPage() {
             </div>
           </Reveal>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 1, background: 'var(--color-line)', border: '1px solid var(--color-line)' }}>
+          <div className="feature-grid">
             {[
               { n: '01', t: 'Mieterauswahl', d: 'Sorgfältige Bonitätsprüfung, Besichtigung und Auswahl der Mieter — auf Ihre Anforderungen zugeschnitten.' },
               { n: '02', t: 'Vertragsmanagement', d: 'Rechtssichere Mietverträge, Übergabeprotokolle, Kautionsverwaltung und fristgerechte Kündigungsbearbeitung.' },
@@ -68,10 +68,10 @@ export default function MietverwaltungPage() {
               { n: '06', t: 'Reporting', d: 'Monatlicher Überblick über Mieteingänge, Ausgaben und offene Posten — per E-Mail oder auf Wunsch postalisch.' },
             ].map((it, i) => (
               <Reveal key={i} delay={i * 60}>
-                <div style={{ background: 'var(--color-background)', padding: 40, minHeight: 260 }}>
+                <div className="feature-card">
                   <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, letterSpacing: '0.2em', color: 'var(--color-secondary)' }}>{it.n}</div>
-                  <h3 className="t-h3" style={{ marginTop: 18 }}>{it.t}</h3>
-                  <p style={{ marginTop: 14, fontSize: 14, color: 'var(--color-ink-soft)', lineHeight: 1.6 }}>{it.d}</p>
+                  <h3 className="t-h3" style={{ marginTop: 4 }}>{it.t}</h3>
+                  <p style={{ fontSize: 14, color: 'var(--color-ink-soft)', lineHeight: 1.6 }}>{it.d}</p>
                 </div>
               </Reveal>
             ))}
@@ -83,7 +83,7 @@ export default function MietverwaltungPage() {
       <section className="section-tight">
         <div className="container">
           <Reveal>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: 64, alignItems: 'start' }}>
+            <div className="grid-responsive" style={{ gridTemplateColumns: '1fr 1.6fr', gap: 64, alignItems: 'start' }}>
               <div>
                 <div className="t-eyebrow">Tätigkeitsgebiet</div>
                 <h2 className="t-h2" style={{ marginTop: 24 }}>Mietverwaltung in <em>Darmstadt</em> — Wohn- und Gewerbeobjekte.</h2>
@@ -105,7 +105,7 @@ export default function MietverwaltungPage() {
       <section className="section-tight" style={{ background: 'var(--color-muted)' }}>
         <div className="container">
           <Reveal>
-            <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: 64, alignItems: 'start' }}>
+            <div className="grid-responsive" style={{ gridTemplateColumns: '1.2fr 1fr', gap: 64, alignItems: 'start' }}>
               <div>
                 <div className="t-eyebrow">Sondereigentum</div>
                 <h2 className="t-h2" style={{ marginTop: 24 }}>Auch einzelne <em>Eigentumswohnungen</em>.</h2>
@@ -130,7 +130,7 @@ export default function MietverwaltungPage() {
       {/* CTA */}
       <section className="section">
         <div className="container">
-          <div style={{ background: 'var(--color-primary)', color: 'var(--color-background)', padding: 'clamp(64px, 8vw, 120px) clamp(40px, 6vw, 96px)', display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: 64, alignItems: 'center' }}>
+          <div className="grid-responsive" style={{ background: 'var(--color-primary)', color: 'var(--color-background)', padding: 'clamp(64px, 8vw, 120px) clamp(40px, 6vw, 96px)', gridTemplateColumns: '1.4fr 1fr', gap: 64, alignItems: 'center' }}>
             <Reveal>
               <h2 className="t-h1" style={{ color: 'var(--color-background)', maxWidth: '20ch' }}>Ihr Mietobjekt in <em>zuverlässigen Händen</em>.</h2>
             </Reveal>
