@@ -200,6 +200,8 @@ img { display: block; max-width: 100%; }
   display: flex;
   gap: 36px;
   align-items: center;
+  margin-left: auto;
+  margin-right: 48px;
 }
 .nav-link {
   font-size: 13px;
