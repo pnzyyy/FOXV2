@@ -2,7 +2,7 @@ export default function FoxMark({ size = 44, style = {}, alt = "FOX", variant = 
   const cls = variant === "dark" ? "foxmark-dark" : "foxmark-light";
   return (
     <img
-      src="/assets/fox-mark-bw.png"
+      src="/assets/fox-head-only.png"
       alt={alt}
       width={size}
       height={size}
