@@ -299,41 +299,7 @@ function VerwaltungPage() {
         </div>
       </section>
 
-      {/* Digital platform feature */}
-      <section className="section section-dark">
-        <div className="container">
-          <div className="split">
-            <div>
-              <Reveal><div className="t-eyebrow" style={{ color: "rgba(255,255,255,0.65)" }}>Digital × Persönlich</div></Reveal>
-              <Reveal delay={100}>
-                <h2 className="t-h1" style={{ color: "var(--color-background)", marginTop: 24 }}>
-                  Eine Plattform für<br />
-                  <em>jeden Mieter</em>.
-                </h2>
-              </Reveal>
-              <Reveal delay={200}>
-                <p className="t-lead" style={{ color: "rgba(255,255,255,0.75)", marginTop: 32 }}>
-                  Schadensmeldung, Nebenkosten, Mietvertrag, Hausordnung — alles in einer App, die sich anfühlt wie eine Banking-App. Aber wenn es brennt, hebt jemand ab.
-                </p>
-              </Reveal>
-              <Reveal delay={300}>
-                <ul style={{ listStyle: "none", padding: 0, margin: "48px 0 0", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
-                  {["Mieter-Portal", "Schaden in 60 Sekunden", "Vertrag & Dokumente", "Push bei Wartungen", "Eigentümer-Dashboard", "Quartalsreports"].map((x) => (
-                    <li key={x} style={{ fontFamily: "var(--font-mono)", fontSize: 11.5, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(255,255,255,0.8)", display: "flex", alignItems: "center", gap: 14 }}>
-                      <span style={{ width: 14, height: 1, background: "var(--color-secondary)" }} />{x}
-                    </li>
-                  ))}
-                </ul>
-              </Reveal>
-            </div>
-            <Reveal kind="image">
-              <div className="img-frame" style={{ aspectRatio: "4/5", background: "#0d0f12" }}>
-                <ArchImage seed="platform" dark label="FOX Mieter-Portal" style={{ width: "100%", height: "100%" }} />
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </section>
+
 
       {/* CTA */}
       <section className="section">

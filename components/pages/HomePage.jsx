@@ -237,10 +237,9 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h3 className="sc-title">Hausverwaltung, <em>neu gedacht</em></h3>
-                  <p className="sc-desc">Digitales Eigentümerportal, Online-Abstimmungen, transparente Abrechnungen in Echtzeit — und trotzdem die persönliche Begehung Ihres Hauses durch Ihren festen Ansprechpartner.</p>
+                  <p className="sc-desc">Transparente Abrechnungen in Echtzeit, Online-Abstimmungen — und trotzdem die persönliche Begehung Ihres Hauses durch Ihren festen Ansprechpartner.</p>
                 </div>
                 <ul className="sc-list">
-                  <li>Digitales Eigentümer-Portal · App</li>
                   <li>Online-Abstimmungen & E-Versammlungen</li>
                   <li>Echtzeit-Kommunikation mit Verwaltung</li>
                   <li>Persönliche Begehungen vor Ort</li>
