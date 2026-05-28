@@ -120,7 +120,7 @@ export default function MarktwertanalysePage() {
               </div>
               <div className="cc-row">
                 <span className="k">Stammhaus</span>
-                <span className="v" style={{ fontSize: 18 }}>Rheinstraße 41<br />64283 Darmstadt</span>
+                <span className="v" style={{ fontSize: 18 }}>Alexandraweg 32<br />64287 Darmstadt</span>
               </div>
               <div className="cc-row">
                 <span className="k">Öffnungszeiten</span>

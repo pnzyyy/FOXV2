@@ -10,7 +10,7 @@ export function ImpressumPage() {
           <Reveal>
             <div className="legal-content">
               <h2>Angaben gemäß § 5 TMG</h2>
-              <p>FOX Immobilien GmbH<br />Rheinstraße 41<br />64283 Darmstadt</p>
+              <p>FOX Immobilien GmbH<br />Alexandraweg 32<br />64287 Darmstadt</p>
               <h3>Vertreten durch</h3>
               <p>Jörn Meenenga &amp; Michel Meenenga (Geschäftsführung)</p>
               <h3>Kontakt</h3>
@@ -28,7 +28,7 @@ export function ImpressumPage() {
               <h3>Mitgliedschaften</h3>
               <p>IVD — Immobilienverband Deutschland<br />BVFI — Bundesverband für die Immobilienwirtschaft<br />Wirtschaftsförderung Region Rhein-Main e.V.</p>
               <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
-              <p>Jörn Meenenga<br />Rheinstraße 41, 64283 Darmstadt</p>
+              <p>Jörn Meenenga<br />Alexandraweg 32, 64287 Darmstadt</p>
               <h3>EU-Streitschlichtung</h3>
               <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit. Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
               <h3>Verbraucherstreitbeilegung</h3>
@@ -52,7 +52,7 @@ export function DatenschutzPage() {
           <Reveal>
             <div className="legal-content">
               <h2>1. Verantwortlicher</h2>
-              <p>FOX Immobilien GmbH, Rheinstraße 41, 64283 Darmstadt<br />Vertreten durch: Jörn Meenenga &amp; Michel Meenenga<br />E-Mail: datenschutz@fox-da.de</p>
+              <p>FOX Immobilien GmbH, Alexandraweg 32, 64287 Darmstadt<br />Vertreten durch: Jörn Meenenga &amp; Michel Meenenga<br />E-Mail: datenschutz@fox-da.de</p>
               <h2>2. Allgemeine Hinweise</h2>
               <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Wir behandeln Ihre Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften.</p>
               <h2>3. Datenerfassung auf dieser Website</h2>

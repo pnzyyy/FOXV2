@@ -101,7 +101,7 @@ export default function KontaktPage() {
               </div>
               <div className="cc-row">
                 <span className="k">Stammhaus</span>
-                <span className="v" style={{ fontSize: 18 }}>Rheinstraße 41<br />64283 Darmstadt</span>
+                <span className="v" style={{ fontSize: 18 }}>Alexandraweg 32<br />64287 Darmstadt</span>
               </div>
               <div className="cc-row">
                 <span className="k">Öffnungszeiten</span>
@@ -120,30 +120,17 @@ export default function KontaktPage() {
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="container">
           <div style={{ height: 480, background: 'var(--color-muted)', position: 'relative', overflow: 'hidden' }}>
-            <svg width="100%" height="100%" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid slice" style={{ position: 'absolute', inset: 0 }}>
-              <rect width="1200" height="480" fill="#E8E6E1" />
-              <g stroke="rgba(26,29,33,0.06)" strokeWidth="1">
-                {Array.from({ length: 30 }).map((_, i) => <line key={'v' + i} x1={i * 40} x2={i * 40} y1="0" y2="480" />)}
-                {Array.from({ length: 12 }).map((_, i) => <line key={'h' + i} x1="0" x2="1200" y1={i * 40} y2={i * 40} />)}
-              </g>
-              <g stroke="rgba(26,29,33,0.18)" strokeWidth="2" fill="none">
-                <path d="M 0 240 L 1200 220" /><path d="M 600 0 L 600 480" />
-                <path d="M 0 360 Q 600 340 1200 380" /><path d="M 200 0 Q 240 240 200 480" />
-                <path d="M 900 0 Q 880 240 920 480" />
-              </g>
-              <g fontFamily="var(--font-mono)" fontSize="9" fill="rgba(26,29,33,0.4)" letterSpacing="2">
-                <text x="40" y="60">MATHILDENHÖHE</text><text x="780" y="60">JOHANNESVIERTEL</text>
-                <text x="40" y="440">BESSUNGEN</text><text x="800" y="440">PAULUSVIERTEL</text>
-              </g>
-              <g transform="translate(600, 240)">
-                <circle r="60" fill="rgba(184,153,104,0.12)" /><circle r="32" fill="rgba(184,153,104,0.22)" />
-                <circle r="10" fill="var(--color-secondary)" /><circle r="4" fill="var(--color-primary)" />
-              </g>
-              <g transform="translate(620, 224)" fontFamily="var(--font-mono)" fontSize="10" fill="var(--color-primary)" letterSpacing="2">
-                <text>FOX · RHEINSTRAßE 41</text>
-                <text y="14" fill="rgba(26,29,33,0.5)">64283 DARMSTADT</text>
-              </g>
-            </svg>
+            <iframe 
+              width="100%" 
+              height="100%" 
+              frameBorder="0" 
+              scrolling="no" 
+              marginHeight="0" 
+              marginWidth="0" 
+              src="https://www.openstreetmap.org/export/embed.html?bbox=8.64%2C49.86%2C8.68%2C49.88&amp;layer=mapnik&amp;marker=49.8728%2C8.6512" 
+              style={{ position: 'absolute', inset: 0, border: 'none' }}
+              title="OpenStreetMap Karte"
+            ></iframe>
           </div>
         </div>
       </section>

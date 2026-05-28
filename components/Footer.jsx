@@ -11,7 +11,7 @@ export default function Footer() {
             </div>
             <p className="footer-tagline">Familienunternehmen seit 1998. <em style={{ color: 'var(--color-secondary)' }}>Verwaltung mit Vorsprung. Verkauf mit Haltung.</em></p>
             <address style={{ marginTop: 36, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.55)', fontStyle: 'normal' }}>
-              Rheinstraße 41<br />64283 Darmstadt
+              Alexandraweg 32<br />64287 Darmstadt
             </address>
           </div>
           <div>
@@ -28,7 +28,7 @@ export default function Footer() {
             <ul>
               <li><Link href="/ueber-uns">Über uns</Link></li>
               <li><Link href="/ueber-uns">Team</Link></li>
-              <li><Link href="/objekte">Aktuelle Objekte</Link></li>
+
               <li><Link href="/kontakt">Kontakt</Link></li>
             </ul>
           </div>
