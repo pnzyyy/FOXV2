@@ -100,7 +100,7 @@ export default function ObjektDetailPage({ slug }) {
                     </div>
                   </div>
                   <div style={{ marginTop: 24, display: 'flex', flexDirection: 'column', gap: 12 }}>
-                    <a href="tel:+496151278940" className="link-line" style={{ fontSize: 13, letterSpacing: '0.1em' }}>+49 6151 27 89 40</a>
+                    <a href="tel:+496151151522" className="link-line" style={{ fontSize: 13, letterSpacing: '0.1em' }}>06151 151522</a>
                     <a href="mailto:meenenga@fox-da.de" className="link-line" style={{ fontSize: 13, letterSpacing: '0.1em' }}>meenenga@fox-da.de</a>
                   </div>
                 </div>

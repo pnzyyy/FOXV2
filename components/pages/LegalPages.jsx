@@ -14,7 +14,7 @@ export function ImpressumPage() {
               <h3>Vertreten durch</h3>
               <p>Jörn Meenenga &amp; Michel Meenenga (Geschäftsführung)</p>
               <h3>Kontakt</h3>
-              <p>Telefon: +49 6151 27 89 40<br />E-Mail: meenenga@fox-da.de</p>
+              <p>Telefon: 06151 151522<br />E-Mail: meenenga@fox-da.de</p>
               <h3>Registereintrag</h3>
               <p>Eintragung im Handelsregister<br />Registergericht: Amtsgericht Darmstadt<br />Registernummer: HRB 91 422</p>
               <h3>Umsatzsteuer-ID</h3>

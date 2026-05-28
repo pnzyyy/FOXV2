@@ -362,7 +362,7 @@ export default function HomePage() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: 24, alignItems: 'flex-start' }}>
                 <Link href="/marktwertanalyse" className="btn btn-ondark"><span>Bewertung anfragen</span><span className="arrow">→</span></Link>
                 <div style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.18em', color: 'rgba(255,255,255,0.55)', textTransform: 'uppercase' }}>oder direkt:</div>
-                <a href="tel:+496151278940" style={{ fontFamily: 'var(--font-display)', fontSize: 32, color: 'var(--color-secondary)', textDecoration: 'none', fontWeight: 400 }}>+49 6151 27 89 40</a>
+                <a href="tel:+496151151522" style={{ fontFamily: 'var(--font-display)', fontSize: 32, color: 'var(--color-secondary)', textDecoration: 'none', fontWeight: 400 }}>06151 151522</a>
               </div>
             </Reveal>
           </div>

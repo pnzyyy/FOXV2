@@ -35,7 +35,7 @@ export default function Footer() {
           <div>
             <h4>Kontakt</h4>
             <ul>
-              <li><a href="tel:+496151278940">+49 6151 27 89 40</a></li>
+              <li><a href="tel:+496151151522">06151 151522</a></li>
               <li><a href="mailto:meenenga@fox-da.de">meenenga@fox-da.de</a></li>
               <li style={{ color: 'rgba(255,255,255,0.45)' }}>Mo–Fr · 09:00–18:00</li>
               <li style={{ marginTop: 20, color: 'rgba(255,255,255,0.55)' }}>IVD · BVFI Mitglied</li>

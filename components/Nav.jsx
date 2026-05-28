@@ -147,8 +147,8 @@ export default function Nav() {
         <div className="nav-mobile-footer">
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 14 }}>
             <span className="dot-live" style={{ width: 6, height: 6, background: '#5fb878', borderRadius: '50%', boxShadow: '0 0 0 4px rgba(95,184,120,0.18)' }} />
-            <a href="tel:+496151278940" style={{ color: 'inherit', textDecoration: 'none', fontFamily: 'var(--font-mono)' }}>
-              +49 6151 27 89 40
+            <a href="tel:+496151151522" style={{ color: 'inherit', textDecoration: 'none', fontFamily: 'var(--font-mono)' }}>
+              06151 151522
             </a>
           </div>
           <Link
