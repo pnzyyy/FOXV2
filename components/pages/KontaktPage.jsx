@@ -127,7 +127,7 @@ export default function KontaktPage() {
               scrolling="no" 
               marginHeight="0" 
               marginWidth="0" 
-              src="https://www.openstreetmap.org/export/embed.html?bbox=8.64%2C49.86%2C8.68%2C49.88&amp;layer=mapnik&amp;marker=49.8728%2C8.6512" 
+              src="https://www.openstreetmap.org/export/embed.html?bbox=8.65%2C49.865%2C8.68%2C49.885&amp;layer=mapnik&amp;marker=49.8767%2C8.6685" 
               style={{ position: 'absolute', inset: 0, border: 'none' }}
               title="OpenStreetMap Karte"
             ></iframe>
